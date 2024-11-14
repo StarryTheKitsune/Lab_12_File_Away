@@ -38,7 +38,7 @@ public class DataSaver
         do{ firstName = SafeInput.getNonZeroLenString(in, "Enter your first name");
             lastName = SafeInput.getNonZeroLenString(in, "Enter your last name");
             idNum = SafeInput.getRegExString (in,"Enter your ID number","^\\d{6}$");
-            email = SafeInput.getRegExString(in,"Enter your email",".?@.?");
+            email = SafeInput.getRegExString(in,"Enter your email",".+@.+");
             yob = SafeInput.getRangedInt(in,"Enter your year of birth",1000,9999);
 
             csvRec = firstName + ", " + lastName + ", " + idNum + ", " + email + ", " + yob;
